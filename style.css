@@ -1,0 +1,182 @@
+
+
+.container {
+    display: grid;
+    grid-template-columns: auto 650px auto auto;
+
+}
+
+.sticky-header {
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    background-color: white;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 100 100'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)' opacity='0.4'/%3E%3C/svg%3E");
+
+}
+
+.p1 {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 140%;
+}
+
+.h1, .h2 {
+    font-family: "Inter", "Space Grotesk", "Manrope", Helvetica, Arial, sans-serif;    text-align: center;
+    font-weight: 600; /* Swiss style likes confident but not ultra-bold */
+    letter-spacing: 3px; /* not as wide as Courier, but still tracked */
+}
+
+.h1 {
+    font-size: 400%;
+}
+
+.h2 {
+    font-size: 300%;
+}
+
+
+
+.button {
+    background-color: white;
+    min-width: 40%;
+    transition: 0.7s;
+    border: 3px solid #222021;
+    padding: 15px 25px;
+    font-weight: bold;
+    text-transform: uppercase;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 5px 5px 0px rgba(0, 0, 0, 0.3);
+}
+
+.button:hover {
+    transform: translate(2px, 2px);
+    box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.3);
+    transition: 0.2s;
+}
+
+.button::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: repeating-linear-gradient(
+        0deg,
+        transparent 0px,
+        rgba(255, 255, 255, 0.1) 1px,
+        transparent 2px
+    );
+    pointer-events: none;  /* This allows clicks to pass through */
+    z-index: 1;
+}
+
+.a1 {
+    color: black;
+    position: relative;
+    z-index: 2;  /* Keeps the link above the pseudo-element */
+}
+
+.p1 {
+    font-family: 'Courier New', monospace;
+    font-size: 140%;
+    letter-spacing: 2px;
+}
+.button-container {
+    width: 800px;
+    margin: 0 auto;
+}
+
+
+body {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 100 100'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)' opacity='0.4'/%3E%3C/svg%3E");
+}
+
+@media (max-width: 768px) {
+
+
+    
+
+  /* Disable the desktop grid behaviour entirely on mobile */
+  .container {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: center !important;
+    width: 100% !important;
+    padding: 20px 12px;
+    box-sizing: border-box;
+  }
+
+  /* Force every section block to be normal width and centered */
+  .container > div {
+    grid-column: auto !important;
+    width: 100% !important;
+    max-width: 420px;
+    margin: 0 auto;
+  }
+
+  .button-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100% !important;
+    gap: 10px;
+  }
+
+  .button {
+    width: 100% !important;
+    max-width: 340px;
+  }
+
+  img {
+    display: none !important;
+  }
+
+  .h1 {
+    font-size: 2.2rem !important;
+    letter-spacing: 2px;
+    margin-bottom: 6px;
+  }
+
+  .h2 {
+    font-size: 1.4rem !important;
+    letter-spacing: 1.5px;
+    margin-bottom: 14px;
+  }
+
+  .p1 {
+    font-size: 1rem !important;
+    line-height: 1.5;
+  }
+
+  body {
+    overflow-x: hidden !important;
+  }
+  .divider-line {
+  width: 100%;
+  max-width: 650px; /* desktop width */
+  height: 4px;
+  background-color: #222021;
+  margin: 30px auto;
+  opacity: 0.6;
+
+  /* This hides the underscore text */
+  font-size: 0;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+/* Makes the line smaller on phones */
+@media (max-width: 768px) {
+  .divider-line {
+    width: 85%;
+    max-width: 380px;
+    height: 2px;
+    margin: 24px auto;
+    opacity: 0.4;
+  }
+}
+
+}
