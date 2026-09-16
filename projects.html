@@ -30,6 +30,7 @@
             <br>
             <h1 class="h1">Benjamin Worton</h1>
             <h2 class="h2">Junior Developer</h2>
+            <h2 class="h2">BSc. & BBA in Business IT</h2>
         </div>
         <div style="grid-column: 2;">
             <div class="button-container">
@@ -66,6 +67,41 @@
         </div>
         <div style="grid-column: 2;">
             <h2 class="h2">PROJECTS</h2>
+            <p class="p1">
+                <b><- Bachelor's thesis project 2026 -> Grade: 5.5 / 6</b><br><br>
+                I evaluated different open-source scanners
+                and one proprietary scanner that scan TLS handshakes for instances of 
+                contemporary or legacy cryptography and post-quantum cryptography.<br><br>
+
+                In order to properly test these scanners, I created a container network that provided
+                test cases for endpoints:
+                <ul>
+                    <li><p class="p1"><b>baseline-classical</b></p></li>
+                        <ul>
+                            <li><p class="p1">Contemporary crypto, quantum vulnerable</p></li>
+                        </ul>
+                    <li><p class="p1"><b>legacy-vulnerable</b></p></li>
+                        <ul>
+                            <li><p class="p1">TLS 1.2, expired cert, deprecated algorithm</p></li>
+                        </ul>
+                    <li><p class="p1"><b>hybrid-pqc</b></p></li>
+                        <ul>
+                            <li><p class="p1">X25519MLKEM768 key exchange</p></li>
+                        </ul>
+                    <li><p class="p1"><b>pure-pqc</b></p></li>
+                        <ul>
+                            <li><p class="p1">ML-KEM768 & ML-DSA in use</p></li>
+                        </ul>
+                    <li><p class="p1"><b>non-nist-pqc</b></p></li>
+                        <ul>
+                            <li><p class="p1">FRODOKEM</p></li>
+                        </ul>
+                    <li><p class="p1"><b>broken-chain</b></p></li>
+                        <ul><p class="p1">Used to check if full chain is parsed</p></ul>
+                </ul>
+
+            
+            </p>
             <p class="p1">
                 <b>
                     <a
